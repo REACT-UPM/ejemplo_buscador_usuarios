@@ -14,10 +14,16 @@ function App() {
   const [query, setQuery] = useState("");
   const [resultado, setResultado] = useState(null);
 
-  const callServer = async () => {    
+  const callServer = async (param) => {    
       if(USE_SERVER) {
         try {
-          const response = await fetch(`${CONFIG.server_url}?limit=${CONFIG.num_items}`);
+          let queryparams = "";
+          if(param==="all"){
+            queryparams = "?limit=" + CONFIG.num_items;
+          } else {
+            queryparams = "/search?q=" + query;
+          }
+          const response = await fetch(`${CONFIG.server_url}${queryparams}`);
           const data = await response.json();         
           //console.log(data);
           setResultado(data.users);
@@ -39,6 +45,9 @@ function App() {
 				<br/>
         <button id="botonsearch" className="new" onClick={()=>callServer()}>
 				  Buscar
+				</button> 
+        <button id="botonall" className="new" onClick={()=>callServer("all")}>
+				  Ver Todos
 				</button>        		
         {resultado && <Resultados numitems={CONFIG.num_items} resultado={resultado} />}	
 			</div>
