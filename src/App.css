@@ -1,32 +1,31 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-#main {
+.App {
   text-align: center;
 }
 
-#cabecera {
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
   background-color: #282c34;
-  padding: 10px;
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-.logo {
-  width: 70px;
-  animation: App-logo-spin infinite 20s linear;
-}
-
-.mensaje {
+.App-link {
   color: #61dafb;
-  margin-left: 20px;
 }
 
 @keyframes App-logo-spin {
@@ -37,32 +36,3 @@ body {
     transform: rotate(360deg);
   }
 }
-
-
-#resultados {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-#resultados li {
-  list-style-type: none;
-  border: 1px solid #ccc;
-  padding: 10px;
-}
-
-#resultados li p img {
-  width: 80px;
-  height: 80px;
-}
-
-#botonsearch {
-  margin-right: 20px;
-}
-
-
-
-
-

@@ -90,22 +90,5 @@ test(JSON.stringify(testinfo), () => {
 });
 
 
-testinfo = {
-  name: "La aplicación maneja el valor del input y filtra los resultados al pulsar el button",
-  score: 2,
-  msg_ok: "El input de la aplicación funciona correctamente y filtra al pulsar el botón",
-  msg_error: "El input de la aplicación NO funciona correctamente o NO filtra al pulsar el botón"
-}
-test(JSON.stringify(testinfo), () => {
-  render(<App />);
-  const theinput = document.querySelector('#query');
-  expect(theinput).toBeInTheDocument();
-  const buscabtn = document.querySelector('#botonsearch');
-  expect(buscabtn).toBeInTheDocument();
-  fireEvent.change(theinput, {target: {value: "john"}})
-  expect(theinput).toHaveValue("john");
-  fireEvent.click(buscabtn);
-  const productos = document.querySelectorAll('#resultados li');
-  expect(productos.length).toBe(50);
-});
+
 
