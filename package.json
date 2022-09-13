@@ -1,9 +1,10 @@
 {
-  "name": "hola-mundo",
+  "name": "ejemplo_buscador_usuarios",
   "version": "0.1.0",
   "private": true,
   "disableHashCheck": true,
   "usejest": true,
+  "devLogs": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
@@ -15,10 +16,10 @@
     "web-vitals": "^2.1.4"
   },
   "info": {
-    "githubURL": "IWEB-UPM/P1_el_tiempo",
-    "serverUrl": "https://autocorector.dit.upm.es/",
-    "courseId": "395",
-    "assignmentId": "53406"
+    "githubURL": "IWEB-UPM/ejemplo_buscador_usuarios",
+    "serverUrl": "https://aat.dit.upm.es/",
+    "courseId": "396",
+    "assignmentId": "39776"
   },
   "scripts": {
     "start": "react-scripts start",
