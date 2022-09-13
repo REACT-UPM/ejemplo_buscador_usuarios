@@ -2,7 +2,7 @@
   "name": "ejemplo_buscador_usuarios",
   "version": "0.1.0",
   "private": true,
-  "disableHashCheck": true,
+  "disableHashCheck": false,
   "usejest": true,
   "devLogs": true,
   "dependencies": {
