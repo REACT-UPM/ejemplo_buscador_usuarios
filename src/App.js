@@ -46,7 +46,9 @@ function App() {
       <div id="main">
           <Header />
           <h2 id="buscador">Buscador de usuarios</h2>
-          <a href="#" onClick={()=>cambiaLang("en")}>en</a>/<a href="#" onClick={()=>cambiaLang("es")}>es</a>
+          <a href="#" onClick={()=>cambiaLang("en")}>en</a>
+          /
+          <a href="#" onClick={()=>cambiaLang("es")}>es</a>
           <div><input type="text" id="query" placeholder="Texto a buscar" value={query} onChange={e=>setQuery(e.target.value)}></input></div>
           <br/>
           <button id="botonsearch" className="new" onClick={()=>callServer()}>
