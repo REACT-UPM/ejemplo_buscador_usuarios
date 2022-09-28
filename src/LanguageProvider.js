@@ -7,13 +7,21 @@ const langData = {
     name: "name",
     email: "email",
     search: "Search",
-    seeall: "See all"
+    seeall: "See all",
+    textsearch: "Text to search"
   },
   "es": {
     name: "nombre",
     email: "correo",
     search: "Buscar",
-    seeall: "Ver Todos"
+    seeall: "Ver Todos",
+    textsearch: "Texto a buscar"
+  },
+  "ca": {
+    name: "nombrecatalan",
+    search: "buscarencatalan",
+    seeall: "catalan",
+    textsearch: "en catalan"
   }
 }
 

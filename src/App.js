@@ -49,7 +49,9 @@ function App() {
           <a href="#" onClick={()=>cambiaLang("en")}>en</a>
           /
           <a href="#" onClick={()=>cambiaLang("es")}>es</a>
-          <div><input type="text" id="query" placeholder="Texto a buscar" value={query} onChange={e=>setQuery(e.target.value)}></input></div>
+          /
+          <a href="#" onClick={()=>cambiaLang("ca")}>ca</a>
+          <div><input type="text" id="query" placeholder={langContext.strings.textsearch} value={query} onChange={e=>setQuery(e.target.value)}></input></div>
           <br/>
           <button id="botonsearch" className="new" onClick={()=>callServer()}>
             {langContext.strings.search}
