@@ -19,7 +19,7 @@
     "githubURL": "IWEB-UPM/ejemplo_buscador_usuarios",
     "serverUrl": "https://aat.dit.upm.es/",
     "courseId": "396",
-    "assignmentId": "39776"
+    "assignmentId": "490"
   },
   "scripts": {
     "start": "react-scripts start",
