@@ -12,7 +12,7 @@ body {
 }
 
 #cabecera {
-  background-color: #282c34;
+  background-color: #b9b9b9;
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -25,7 +25,7 @@ body {
 }
 
 .mensaje {
-  color: #61dafb;
+  color: #000000;
   margin-left: 20px;
 }
 
