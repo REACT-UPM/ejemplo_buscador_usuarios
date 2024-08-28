@@ -7,6 +7,7 @@ export default function Resultados(props) {
           <p>Nombre: <b>{item.firstName}</b> {item.lastName}</p>
           <p>Email: {item.email}</p>
           <p><img src={item.image} alt="Imagen de {item.firstName}"/></p>
+          {props.authuser && <button onClick={()=>props.deleteUser(item.id)}>Borrar</button>}
         </li>
       ))}
     </ul>

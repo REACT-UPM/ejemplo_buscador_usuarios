@@ -15,8 +15,9 @@ body {
   background-color: #b9b9b9;
   padding: 10px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+  
 }
 
 .logo {
@@ -63,6 +64,15 @@ body {
 }
 
 
+.derecha {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 20px;
+}
 
-
+.error {
+  color: red;
+  font-size: 20px;
+}
 
