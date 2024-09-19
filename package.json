@@ -10,7 +10,7 @@
     "githubURL": "IWEB-UPM/ejemplo_buscador_usuarios",
     "serverUrl": "https://aat.dit.upm.es/",
     "courseId": "396",
-    "assignmentId": "490"
+    "assignmentId": "8514"
   },
   "scripts": {
     "dev": "vite",
@@ -20,7 +20,7 @@
     "cat": "cat .gitignore"
   },
   "dependencies": {
-    "autocorector": "^3.2.9",
+    "autocorector": "^3.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
