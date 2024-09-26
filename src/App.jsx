@@ -4,6 +4,7 @@ import Header from "./Header";
 import './App.css';
 import {mock1} from "./constants/users.js";
 import CONFIG from "./config/config";
+import { useEffect } from "react";
 
 const USE_SERVER = CONFIG.use_server;
 
@@ -63,6 +64,9 @@ function App() {
         if(data.accessToken) {
           setAuthuser(user);
           setToken(data.accessToken);
+          //save to local storage
+          localStorage.setItem('authuser', user);
+          localStorage.setItem('token', data.accessToken);
         } else {
           setAuthuser(null);
           setToken(null);
@@ -78,6 +82,9 @@ function App() {
   const logout = () => {
     setAuthuser(null);
     setToken(null);
+    //remove from local storage
+    localStorage.removeItem('authuser');
+    localStorage.removeItem('token');
   }
 
   const deleteUser = async (id) => {
@@ -96,6 +103,16 @@ function App() {
     }
     
   }
+
+  //check if we have a token in local storage
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    const authuser = localStorage.getItem('authuser');
+    if(token && authuser) {
+      setToken(token);
+      setAuthuser(authuser);
+    }
+  }, []);
 
   return (
     <div id="main">
