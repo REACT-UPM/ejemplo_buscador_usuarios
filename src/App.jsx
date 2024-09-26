@@ -60,9 +60,9 @@ function App() {
         setAutherror(null);
         const data = await login.json();
         console.log(data);
-        if(data.token) {
+        if(data.accessToken) {
           setAuthuser(user);
-          setToken(data.token);
+          setToken(data.accessToken);
         } else {
           setAuthuser(null);
           setToken(null);
