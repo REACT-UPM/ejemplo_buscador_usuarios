@@ -19,7 +19,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "autocorector": "^3.2.9",
+    "autocorector": "^4.0.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
