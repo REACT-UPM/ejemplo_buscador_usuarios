@@ -38,7 +38,8 @@ function App() {
       }
   }
 
-  const cambiaLang = (newlang)=>{
+  const cambiaLang = (e, newlang)=>{
+    e.preventDefault();
     langContext.switchLang(newlang);
   }
 
@@ -46,11 +47,11 @@ function App() {
       <div id="main">
           <Header />
           <h2 id="buscador">Buscador de usuarios</h2>
-          <a href="#" onClick={()=>cambiaLang("en")}>en</a>
+          <a href="#" onClick={(e)=>cambiaLang(e, "en")}>en</a>
           /
-          <a href="#" onClick={()=>cambiaLang("es")}>es</a>
+          <a href="#" onClick={(e)=>cambiaLang(e, "es")}>es</a>
           /
-          <a href="#" onClick={()=>cambiaLang("ca")}>ca</a>
+          <a href="#" onClick={(e)=>cambiaLang(e, "ca")}>ca</a>
           <div><input type="text" id="query" placeholder={langContext.strings.textsearch} value={query} onChange={e=>setQuery(e.target.value)}></input></div>
           <br/>
           <button id="botonsearch" className="new" onClick={()=>callServer()}>
@@ -58,8 +59,8 @@ function App() {
           </button> 
           <button id="botonall" className="new" onClick={()=>callServer("all")}>
             {langContext.strings.seeall}
-          </button>        		
-          {resultado && <Resultados numitems={CONFIG.num_items} resultado={resultado} />}	
+          </button>        
+          {resultado && <Resultados numitems={CONFIG.num_items} resultado={resultado} />} 
         </div>
   );
 }

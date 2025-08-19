@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import { createContext, useState } from "react";
 
 export const LanguageContext = createContext({});
 
@@ -25,7 +25,6 @@ const langData = {
   }
 }
 
-
 export function LanguageProvider(props) {
   const [lang, setLang] = useState("en");
 
@@ -41,8 +40,8 @@ export function LanguageProvider(props) {
   };
 
   return (
-    <LanguageContext.Provider value={context}>
+    <LanguageContext value={context}>
       {props.children}
-    </LanguageContext.Provider>
+    </LanguageContext>
   );
 };
