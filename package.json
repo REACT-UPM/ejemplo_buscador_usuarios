@@ -1,5 +1,5 @@
 {
-  "name": "vite-project",
+  "name": "ejemplos_simples_react19",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,14 +10,13 @@
     "githubURL": "IWEB-UPM/ejemplo_buscador_usuarios",
     "serverUrl": "https://aat.dit.upm.es/",
     "courseId": "396",
-    "assignmentId": "8514"
+    "assignmentId": "7797"
   },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "cat": "cat .gitignore"
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
   "dependencies": {
     "autocorector": "^4.0.1",
