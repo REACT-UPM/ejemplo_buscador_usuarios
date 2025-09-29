@@ -106,8 +106,10 @@ function App() {
 
   //check if we have a token in local storage
   useEffect(() => {
+    console.log("checking local storage for token");
     const token = localStorage.getItem('token');
     const authuser = localStorage.getItem('authuser');
+    console.log("found", token, authuser);
     if(token && authuser) {
       setToken(token);
       setAuthuser(authuser);
