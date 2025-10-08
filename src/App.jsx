@@ -13,6 +13,7 @@ const USE_SERVER = CONFIG.use_server;
 function App() {
   const [query, setQuery] = useState("");
   const [resultado, setResultado] = useState(null);
+  const [username, setUsername] = useState("Enrique Barra");
 
   const callServer = async (param) => {    
       if(USE_SERVER) {
@@ -37,9 +38,18 @@ function App() {
       }
   }
 
+  const cambiarUsuario = async () => {
+    // obtenemos el nuevo usuario de un fetch a user.json que responde con un formato { "name": "Nuevo Nombre" }
+    const response = await fetch("https://aat.dit.upm.es/user.json");
+    const data = await response.json();
+    console.log(data);
+    setUsername(data.name);
+  }
+
   return (
     <div id="main">
-        <Header />
+        <Header cambiarUsuario={cambiarUsuario} nombre={username} />
+
  				<h2 id="buscador">Buscador de usuarios</h2>
 				<div><input type="text" id="query" placeholder="Texto a buscar" value={query} onChange={e=>setQuery(e.target.value)}></input></div>
 				<br/>
