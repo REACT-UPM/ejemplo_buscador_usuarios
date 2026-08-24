@@ -1,4 +1,5 @@
 import { useState, useContext } from "react";
+import { use } from "react";
 import Resultados from "./Resultados";
 import Header from "./Header";
 import './App.css';
@@ -13,7 +14,9 @@ function App() {
   const [query, setQuery] = useState("");
   const [resultado, setResultado] = useState(null);
 
-  const langContext = useContext(LanguageContext);
+  //const langContext = useContext(LanguageContext);
+  //lo mismo con use en lugar de useContext
+  const langContext = use(LanguageContext);
 
   const callServer = async (param) => {    
       if(USE_SERVER) {
