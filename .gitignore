@@ -22,5 +22,13 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+<<<<<<< HEAD
 user.json
 autocorector/data
+=======
+
+
+
+user.json
+/autocorector/data
+>>>>>>> ce0752978e213f31e5e96d81e0c2100b46abe3f7
