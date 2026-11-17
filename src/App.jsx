@@ -42,6 +42,10 @@ function App() {
       }
   }
 
+  /* Podeís probar con:
+  USUARIO: emilys
+  PASSWORD: emilyspass
+  */
   const auth = async (user, password) => {
     console.log("autenticando", user);
     try{
